@@ -1,14 +1,36 @@
-.sudoku-table {
-    border-collapse: collapse;
-    width: 100%;
-}
+    CSS
+    body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+    }
 
-.sudoku-cell {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    padding: 8px;
-    /* Adjust padding according to your preference */
-    text-align: center;
-    /* Center the content within cells */
-}
+    .sudoku-board {
+        width: 600px;
+        height: 600px;
+        margin: 0 auto; /* Add space around the board */
+        display: flex;
+        flex-wrap: wrap;
+        background-color: whitesmoke;
+    }
+
+    .sudoku-cell{
+        width: 11.025%; 
+        height: 11.025%;
+        border: 1px solid darkgray;
+
+        /* Text */
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .vertical-line {
+        border-right: 2px solid black;
+    }
+
+    .horizontal-line {
+        border-bottom: 2px solid black;
+    }

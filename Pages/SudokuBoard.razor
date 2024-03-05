@@ -1,15 +1,21 @@
-﻿@page "/board"
+﻿@using System.Linq;
 
-<table>
-    @for (int i = 0; i < 9; i++)
+@code {
+
+}
+
+<div class="sudoku-board">
+    @for (int r = 0; r < 9; r++)
     {
-        <tr>
-            @for (int j = 0; j < 9; j++)
-            {
-                <td class="sudoku-cell">
-                    <!-- Your content for each cell goes here -->
-                </td>
+        for (int c = 0; c < 9; c++)
+        {
+            <div class="sudoku-cell"></div>
+            if (c % 3 == 2) {
+                <div class="vertical-line"></div>
             }
-        </tr>
+            if (r % 3 == 2) {
+            <div class="horizontal-line"></div>
+            }
+        }   
     }
-</table>
+</div>
