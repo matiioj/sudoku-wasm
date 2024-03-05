@@ -1,0 +1,15 @@
+﻿@page "/board"
+
+<table>
+    @for (int i = 0; i < 9; i++)
+    {
+        <tr>
+            @for (int j = 0; j < 9; j++)
+            {
+                <td class="sudoku-cell">
+                    <!-- Your content for each cell goes here -->
+                </td>
+            }
+        </tr>
+    }
+</table>

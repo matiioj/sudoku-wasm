@@ -1,0 +1,14 @@
+.sudoku-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.sudoku-cell {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 8px;
+    /* Adjust padding according to your preference */
+    text-align: center;
+    /* Center the content within cells */
+}
