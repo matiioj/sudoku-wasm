@@ -15,10 +15,10 @@
     }
 
     .sudoku-cell{
+        
+        border: 1px solid darkgray;
         width: 11.025%; 
         height: 11.025%;
-        border: 1px solid darkgray;
-
         /* Text */
         font-size: 20px;
         font-weight: bold;
@@ -32,5 +32,16 @@
     }
 
     .horizontal-line {
-        border-bottom: 2px solid black;
+        background-color: black;
+        height: 2px; /* Adjust the height accordingly */
+        width: 100%;
     }
+    
+    /* Add the following to clear floats */
+    .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+   
