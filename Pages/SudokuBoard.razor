@@ -4,18 +4,17 @@
 
 }
 
-<div class="sudoku-board">
-    @for (int r = 0; r < 9; r++)
-    {
-        for (int c = 0; c < 9; c++)
+<div class="sudoku-container">
+    <table id="sudoku-gui">
+        @for (var c = 0; c < 9; c++)
         {
-            <div class="sudoku-cell"></div>
-            @if (c % 3 == 2) {
-                <div class="vertical-line"></div>
-            }
+            <tr>
+                @for (var r = 0; r < 9; r++)
+                {
+                    <td><input type="text" maxlength="1" onkeypress="">
+                    </td>
+                }
+            </tr>
         }
-        @if (r % 3 == 2) {
-            <div class="horizontal-line"></div>
-        }
-    }
+    </table>
 </div>

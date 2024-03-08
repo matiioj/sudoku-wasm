@@ -1,47 +1,38 @@
-    CSS
-    body {
-        font-family: sans-serif;
-        margin: 0;
-        padding: 0;
+    .sudoku-container {
+        margin: 20px auto 0 auto;
     }
 
-    .sudoku-board {
-        width: 600px;
-        height: 600px;
-        margin: 0 auto; /* Add space around the board */
-        display: flex;
-        flex-wrap: wrap;
-        background-color: whitesmoke;
+    .table {
+        margin: 0 auto;
+        border: 1px solid black;
+        border-collapse: collapse;
     }
 
-    .sudoku-cell{
-        
-        border: 1px solid darkgray;
-        width: 11.025%; 
-        height: 11.025%;
-        /* Text */
-        font-size: 20px;
-        font-weight: bold;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    input[type="text"], td {
+        height: 35px;
+        width: 35px;
+        font-size: 25px;
+        text-align: center;
+        border: 0.5px solid white;
     }
 
-    .vertical-line {
-        border-right: 2px solid black;
+    td {
+        border: 0.5px solid black;
     }
 
-    .horizontal-line {
-        background-color: black;
-        height: 2px; /* Adjust the height accordingly */
-        width: 100%;
-    }
-    
-    /* Add the following to clear floats */
-    .clearfix::after {
-        content: "";
-        display: table;
-        clear: both;
+    td:first-child {
+        border-left: 2px solid;
     }
 
+    tr:first-child {
+        border-top: 2px solid;
+    }
+
+    td:nth-child(3n) {
+        border-right: 2px solid;
+    }
+
+    tr:nth-child(3n) td {
+        border-bottom: 2px solid;
+    }
    
